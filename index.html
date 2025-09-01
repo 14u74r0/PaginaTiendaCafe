@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title> Tienda de Cafe - Trabajo Practico</title>
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>TIENDA DE CAFÉ</h1>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="https://tiendadecafe.com.ar/tienda">NUESTRO CAFE</a></li>
+                <li><a href="https://tiendadecafe.com.ar/tutoriales">TUTORIALES</a></li>
+                <li><a href="https://tiendadecafe.com.ar/locales">LOCALES</a></li>
+                <li><a href="https://tiendadecafe.com.ar/menu-tienda">NUESTRO MENÚ</a></li>
+                <li><a href="https://tiendadecafe.com.ar/trabaja-en-tdc">TRABAJÁ CON NOSOTROS</a></li>
+                <li><a href="https://tiendadecafe.com.ar/franquicias">FRANQUICIAS</a></li>
+                <li><a href="https://tiendadecafe.com.ar/contacto">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <p>Tu cafe preferido</p>
+                <h2>SIEMPRE CERCA</h2>
+                <p>Blends, varietales, cafes del mundo. <br>Encontra tu Tienda mas cercana y tentate con nuestros sabores.</p>
+                <button id="encontranosBtn" class="button">ENCONTRANOS</button>
+                <script src="src/button.js"></script>
+            </div>
+        </section>
+
+        <div class="cards-container">
+            <div class="card">
+                <a href="https://tiendadecafe.com.ar/metodos-espresso" class="card-link">
+                    <div class="card-image" style="background-image: url('https://tiendadecafe.com.ar/wp-content/uploads/2021/04/bannerpromo_cafe_02_v2.jpg');"></div>
+                    <div class="card-overlay">
+                        <span class="card-subtitle">Aprendé a hacer tu café como un experto</span>
+                        <h2 class="card-title">SECRETOS DEL BARISTA</h2>
+                        <button class="card-btn">VER</button>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="https://tiendadecafe.com.ar/menu-tienda" class="card-link">
+                    <div class="card-image" style="background-image: url('https://tiendadecafe.com.ar/wp-content/uploads/2025/04/TIENDA-042400313-1-scaled-760x420.jpg');"></div>
+                    <div class="card-overlay">
+                        <span class="card-subtitle">Descubrí nuestras cápsulas compatibles</span>
+                        <h2 class="card-title">CAFÉ EN CÁPSULAS</h2>
+                        <button class="card-btn">VER</button>
+                    </div>
+                </a>
+            </div>
+        </div>
+    <section class ="gallery">
+        <div class="gallery-item"><img src="https://tiendadecafe.com.ar/wp-content/uploads/2021/04/packhome_01.jpg" alt="Imagen 1"></div>
+        <div class="gallery-item"><img src="https://tiendadecafe.com.ar/wp-content/uploads/2021/04/bannerpromo_cafe_02_v2.jpg" alt="Imagen 2"></div>
+        <div class="gallery-item"><img src="https://tiendadecafe.com.ar/wp-content/uploads/2021/04/capsulas_intensidad-600x600.jpg" alt="Imagen 3"></div>
+        <div class="gallery-item"><img src="https://tiendadecafe.com.ar/wp-content/uploads/2025/04/TDC_052324338-1_ALTA-_1_-scaled-1230x680.jpg" alt="Imagen 4"></div>
+        <div class="gallery-item"><img src="https://t4.ftcdn.net/jpg/01/05/90/77/360_F_105907729_4RzHYsHJ2UFt5koUI19fc6VzyFPEjeXe.jpg" alt="Imagen 5"></div>
+        <div class="gallery-item"><img src="https://tiendadecafe.com.ar/wp-content/uploads/2021/04/packhome_02.jpg" alt="Imagen 6"></div>
+    </section>
+
+    <footer class="footer-banner">
+    <div class="footer-container">
+        <div class="footer-col logo-col">
+            <img src="src/logoCafe.png" alt="Logo Tienda de Cafe" class="footer-logo">
+        </div>
+        <div class="footer-col">
+            <h3>CONTENIDOS</h3>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="https://tiendadecafe.com.ar/tienda">Nuestro Café</a></li>
+                <li><a href="https://tiendadecafe.com.ar/locales">Locales</a></li>
+                <li><a href="https://tiendadecafe.com.ar/menu-tienda">Nuestro menú</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>NECESITÁS AYUDA</h3>
+            <ul>
+                <li><a href="https://tiendadecafe.com.ar/tutoriales">Tutoriales</a></li>
+                <li><a href="https://tiendadecafe.com.ar/trabaja-en-tdc">Trabajá en TDC</a></li>
+                <li><a href="https://tiendadecafe.com.ar/franquicias">Franquicias</a></li>
+                <li><a href="https://tiendadecafe.com.ar/contacto">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>¡SUSCRIBITE PARA RECIBIR DESCUENTOS Y NOVEDADES EXCLUSIVAS!</h3>
+            <form class="footer-form">
+                <input type="text" placeholder="Tu nombre">
+                <input type="email" placeholder="Tu email">
+                <button type="submit">SUSCRIBIRME</button>
+            </form>
+            <div class="footer-social">
+                <h4>CONÉCTATE CON NOSOTROS</h4>
+                <a href="https://www.facebook.com/Tiendadecafe" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="social-icon"></a>
+                <a href="https://www.instagram.com/tiendadecafear" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" class="social-icon"></a>
+            </div>
+        </div>
+    </div>
+        <div class="footer-copy">
+            <p>© Copyright 2025 Tienda de café - Todos los derechos reservados.</p>
+            <p>Todos los logos, productos, marcas y nombres aquí utilizados son propiedad registrada.</p>
+        </div>
+    </footer>
+</body>
+</html>
