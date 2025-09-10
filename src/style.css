@@ -18,16 +18,16 @@
     color: white;
     background: rgba(40, 30, 20, 0.55);
     background-color: rgba(30, 20, 10, 0.7);
-    padding: 18px 0 8px 0;
-    padding-top: 10px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+    padding: 11px 0 5px 0;
+    padding-top: 11px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.15);
 }
 
 .logo h1{
     font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin-bottom: 8px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
     text-shadow: 0 2px 8px rgba(0,0,0,0.25);
 }
 
@@ -37,23 +37,27 @@
 }
 
 .nav li {
-    margin-left: 30px;
+    margin-left: 50px;
 }
 
 .nav a {
     text-decoration: none;
-    color: white;
-    font-weight: 400;
-    font-size: 0.9rem;
-    transition: color 0.3s;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.4s;
 }
 
 .nav a:hover {
-    color: #c0c0c0;
+    color: #f5861e9c;
+}
+
+.botonHamburguesa {
+    display: none;
 }
 
 .hero {
-    margin-top: 75px;
+    margin-top: 93px;
     position: relative;
     width: 100%;
     height: 100vh;
@@ -102,7 +106,7 @@
     margin-bottom: 30px;    
 }
 
-.button{
+.botonEncontranos, .button {
     background-color: transparent;
     border: 2px solid white;
     color: white;
@@ -112,17 +116,122 @@
     transition: background-color 0.3s, color 0.3s;
 }
 
-.button:hover {
+.botonEncontranos:hover {
     background-color: white;
     color: #402d1a;
+}
+
+.h2Productos {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #3c2a1e;
+    margin-bottom: 50px;
+    margin-top: 100px; /* Aumentado de 60px a 100px para bajarlo más */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative; /* Añadido para el pseudo-elemento */
+}
+
+.h2Productos::after {
+    content: '';
+    position: absolute;
+    bottom: -20px; /* Distancia entre el texto y la línea */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px; /* Ancho de la línea */
+    height: 3px; /* Grosor de la línea */
+    background-color: #d2a86a; /* Usando el mismo color dorado de tu footer */
+}
+
+.productos {
+    padding: 0 70px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.productos .swiper,
+.productos .mySwiper {
+    overflow: visible;
+    position: relative;
+    padding: 20px 0;
+}
+
+.productos .swiper-wrapper {
+    overflow: visible;
+}
+
+.productos .swiper-slide {
+    max-width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.productos .swiper-slide:hover {
+    transform: scale(1.05);
+}
+
+.productos .swiper-slide p {
+    margin-top: 15px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #895231;
+}
+
+.swiper-button-next {
+    right: -60px;
+}
+
+.swiper-button-prev {
+    left: -60px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    display: flex;
+    visibility: visible;
+    color: #ab762d;
+    opacity: 1;
+    position: absolute;
+    top: 45%;
+    width: 50px;
+    height: 50px;
+    z-index: 9999;
+
+    background-color: rgba(39, 22, 2, 0.551);
+    color: #3c2a1e;
+    border: 2px solid #d2a86a;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.3s ease;
+
+    margin-top: 0;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+    color: #d2a86a;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.swiper-pagination-bullet {
+    background: #694228;
 }
 
 .cards-container {
     display: flex;
     justify-content: center;
-    gap: 32px;
+    gap: 60px;
     flex-wrap: wrap;
     margin: 40px 0;
+    padding: 20px;
 }
 
 .card {
@@ -136,7 +245,7 @@
     border-radius: 8px;
 }
 
-.card link {
+.card-link {
     display: block;
     width: 100%;
     height: 100%;
@@ -344,4 +453,130 @@
     font-size: 0.85rem;
     color: #ccc;
     margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 20px;
+        height: 93px;
+    }
+
+    .logo {
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .logo h1 {
+        font-size: 2rem;
+        margin-bottom: 0;
+        padding-left: 30px;
+        line-height: 45px;
+    }
+
+    .botonHamburguesa {
+        display: block;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        padding: 0;
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+    }
+
+    .botonHamburguesa .linea {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px 0;
+        transition: all 0.4s;
+    }
+
+    .footer {
+        padding: 15px;
+        font-size: 0.9rem; 
+    }
+
+    .nav {
+        display: block;
+        max-height: 0;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 93px; 
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+        z-index: 9;
+    }
+
+    .nav.is-open {
+        max-height: 500px;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav li {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+        border-bottom: 1px solid #542805;
+    }
+
+    .nav li:last-child {
+        border-bottom: none;
+    }
+
+    .nav a {
+        color: #333
+    }
+
+    .productos {
+        padding: 0 20px;
+    }
+
+    .h2Productos {
+        font-size: 2.5rem;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .h2Productos::after {
+        width: 290px;
+        height: 2px;
+        bottom: -15px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        margin-bottom: 20px;
+        width: 90%;
+        height: 300px;
+    }
 }
