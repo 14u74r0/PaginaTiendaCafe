@@ -121,38 +121,36 @@
     color: #402d1a;
 }
 
+/*-----------------------PRODUCTOS----------------------------*/
+.productos {
+    padding: 0 100px;
+    position: relative;
+    margin: 0 auto;
+}
 .h2Productos {
     font-size: 2rem;
     font-weight: 800;
     color: #3c2a1e;
     margin-bottom: 50px;
-    margin-top: 100px; /* Aumentado de 60px a 100px para bajarlo más */
+    margin-top: 100px; 
     text-transform: uppercase;
     letter-spacing: 2px;
     text-align: center;
-    position: relative; /* Añadido para el pseudo-elemento */
+    position: relative; 
 }
 
 .h2Productos::after {
     content: '';
     position: absolute;
-    bottom: -20px; /* Distancia entre el texto y la línea */
+    bottom: -20px; 
     left: 50%;
     transform: translateX(-50%);
-    width: 80px; /* Ancho de la línea */
-    height: 3px; /* Grosor de la línea */
-    background-color: #d2a86a; /* Usando el mismo color dorado de tu footer */
+    width: 80px; 
+    height: 3px; 
+    background-color: #d2a86a; 
 }
 
-.productos {
-    padding: 0 70px;
-    position: relative;
-    margin: 0 auto;
-}
-
-.productos .swiper,
-.productos .mySwiper {
-    overflow: visible;
+.productos .swiper{
     position: relative;
     padding: 20px 0;
 }
@@ -168,31 +166,21 @@
     position: relative;
 }
 
-.productos .swiper-slide:hover {
-    transform: scale(1.05);
-}
-
-.productos .swiper-slide p {
-    margin-top: 15px;
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #895231;
-}
 
 .swiper-button-next {
-    right: -60px;
+    right: 15px;
 }
 
 .swiper-button-prev {
-    left: -60px;
+    left: 15px;
 }
 
 .swiper-button-next,
 .swiper-button-prev {
     display: flex;
-    visibility: visible;
+    visibility: hidden;
     color: #ab762d;
-    opacity: 1;
+    opacity: 0;
     position: absolute;
     top: 45%;
     width: 50px;
@@ -213,6 +201,13 @@
     margin-top: 0;
 }
 
+.productos:hover .swiper-button-next,
+.productos:hover .swiper-button-prev {
+    visibility: visible;
+    opacity: 1; 
+    transform: translateY(0); 
+}
+
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
     background: rgba(255, 255, 255, 1);
@@ -221,10 +216,35 @@
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
+/*EFECTOS DE ENTRADA*/
+.swiper-button-next,
+.swiper-button-prev {
+    transform: translateY(-10px);
+}
+
+.productos .swiper-slide:hover {
+    transform: scale(1.05);
+}
+.productos:hover .swiper-button-next,
+.productos:hover .swiper-button-prev {
+    transform: translateY(0); 
+}
+/*EFECTOS DE ENTRADA*/
+
 .swiper-pagination-bullet {
     background: #694228;
 }
 
+.productos .swiper-slide p {
+    margin-top: 15px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #895231;
+}
+/*-----------------------PRODUCTOS----------------------------*/
+
+
+/*-----------------------TARJETAS----------------------------*/
 .cards-container {
     display: flex;
     justify-content: center;
@@ -312,7 +332,99 @@
     background: #d2a86a;
     color: #181716;
 }
+/*-----------------------TARJETAS----------------------------*/
 
+
+/*-----------------------DETALLES DE LOS CAFES----------------------------*/
+.quevasaelegirhoy {
+    text-align: center; 
+    padding: 10px 40px;
+    background-color: rgb(220, 219, 219) ;
+    }
+
+.contenedor-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
+    }
+    
+.NUESTROCAFE {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #3c2a1e;
+    margin-bottom: 20px;
+    margin-top: 50px; 
+    }
+
+.ELEGIRHOY {
+    font-size: 2rem;
+    font-weight: 800;
+     color: #946342;
+    margin-bottom: 80px; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+    position: relative;
+    }
+
+.ELEGIRHOY::after {
+    content: '';
+    position: absolute;
+    bottom: -15px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px; 
+    height: 3px; 
+    background-color: #d2a86a; 
+    }
+
+.columna1 {
+    text-align: right;
+    padding-right: 10px;
+    }
+
+.columna2 {
+    text-align: left;
+    padding-left: 10px;
+    }
+
+.columna1 h3, .columna2 h3 {
+    font-weight: 700;
+    color: #c68e3a;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    }
+
+.columna1 p, .columna2 p {
+    color: #1b1818;
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    }
+
+.imagenMiddle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    }
+
+.imagenMiddle img {
+    max-width: 100%;
+    height: 550px;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(97, 64, 9, 0.425);
+    }
+/*-----------------------DETALLES DE LOS CAFES----------------------------*/
+
+
+/*-----------------------GALERIA----------------------------*/
 .gallery {
     display: flex;
     align-items: center;
@@ -331,7 +443,66 @@
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
+/*-----------------------GALERIA----------------------------*/
 
+/*-----------------------LOCALES----------------------------*/
+.siemprehay {
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-image: url('https://i.pinimg.com/1200x/a3/e2/f3/a3e2f3318f6550e2c72caad2d36bbbaa.jpg');
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.636);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido {
+    text-align: center;
+    max-width: 1000px;
+    padding: 0 30px;
+}
+
+.unatiendacerca{
+    font-size: 1.8rem;
+    color: white
+}
+
+.tuyo {
+    font-weight: 600;
+    font-size: 4rem;
+    color: #fff;
+    color: #d4a574;
+}
+
+.sucursal {
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.btnIngresar {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 15px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.5s;
+}
+
+.btnIngresar:hover{
+    border-color: #ba6f41e8;
+    background-color: #b6784f;
+}
+/*-----------------------LOCALES----------------------------*/
+
+/*-----------------------FOOTER----------------------------*/
 .footer-banner {
     background: #181716;
     color: #fff;
@@ -454,7 +625,9 @@
     color: #ccc;
     margin-top: 10px;
 }
+/*-----------------------FOOTER----------------------------*/
 
+/*-----------------------MOVIL----------------------------*/
 @media (max-width: 768px) {
     .header {
         display: flex;
@@ -578,5 +751,26 @@
         margin-bottom: 20px;
         width: 90%;
         height: 300px;
+    }
+
+    .contenedor-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .columna1, .columna2 {
+        text-align: center;
+        padding: 0;
+    }
+
+    .ELEGIRHOY {
+        font-size: 1.5rem;
+        margin-bottom: 50px;
+    }
+
+    .quevasaelegirhoy {
+        padding: 40px 15px;
+        padding: 0;
+        align-items: center;
     }
 }
